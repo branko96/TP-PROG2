@@ -1,0 +1,48 @@
+unit Unit1;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, ExtCtrls, StdCtrls,ME_Categorias;
+
+type
+  TForm1 = class(TForm)
+    Panel1: TPanel;
+    Button1: TButton;
+    Button2: TButton;
+    Panel2: TPanel;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+uses Unit2, Unit3;
+
+{$R *.dfm}
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+Form2.Show;
+end;
+
+procedure TForm1.Button2Click(Sender: TObject);
+begin
+Form3.Show;
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+ME_Categorias.CrearMe(ME_Categorias.ME,'C:\Users\jonathan\Desktop\Final_Prog2\archivos');
+end;
+
+end.
