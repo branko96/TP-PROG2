@@ -1,8 +1,8 @@
 object Form3: TForm3
-  Left = 136
-  Top = 215
-  Width = 330
-  Height = 268
+  Left = 459
+  Top = 244
+  Width = 399
+  Height = 313
   Caption = 'Completar Datos'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -81,5 +81,14 @@ object Form3: TForm3
     ParentFont = False
     TabOrder = 2
     OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 256
+    Top = 168
+    Width = 75
+    Height = 25
+    Caption = 'Registrarse'
+    TabOrder = 3
+    OnClick = Button2Click
   end
 end

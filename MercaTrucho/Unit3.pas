@@ -14,7 +14,9 @@ type
     Label3: TLabel;
     Edit2: TEdit;
     Button1: TButton;
+    Button2: TButton;
     procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -26,13 +28,14 @@ var
 
 implementation
 
-uses Unit4, Unit5;
+uses Unit4, Unit5, Unit2;
 
 {$R *.dfm}
 
 procedure TForm3.Button1Click(Sender: TObject);
 begin
-
+Application.Initialize;
+Application.CreateForm(TForm4, Form4);
 if Edit2.Text='palo' then
   begin
     Form5.Show;
@@ -42,6 +45,13 @@ else
     Form4.Show;
   end;
 
+end;
+
+procedure TForm3.Button2Click(Sender: TObject);
+begin
+Application.Initialize;
+Application.CreateForm(TForm2, Form2);
+Form2.Show;
 end;
 
 end.
