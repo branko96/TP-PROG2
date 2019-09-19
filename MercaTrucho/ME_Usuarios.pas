@@ -59,6 +59,7 @@ begin
  {$I-}
  assign(ME.D,RutaMe+NombreMe+'.DAT');
  assign(ME.C,RutaMe+NombreMe+'.CON');
+ WriteLn(NombreMe+'.CON');
  reset(ME.D);
  errorD:=IOResult<>0;
  reset(ME.C);

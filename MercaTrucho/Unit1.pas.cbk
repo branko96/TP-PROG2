@@ -42,7 +42,7 @@ end;
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
-ME_Categorias.CrearMe(ME_Categorias.ME,'C:\Users\HP\Desktop\MercaTrucho');
+ME_Categorias.CrearMe(ME_Categorias.ME,'C:/Users/BRANKO\Desktop\JUAN 23 TODO\TP FINAL PROG 2\TP-PROG2\MercaTrucho\');
 end;
 
 end.
