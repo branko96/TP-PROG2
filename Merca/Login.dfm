@@ -1,6 +1,6 @@
 object Form_login: TForm_login
-  Left = 226
-  Top = 266
+  Left = 185
+  Top = 199
   Width = 928
   Height = 480
   Caption = 'Form_login'
@@ -11,6 +11,7 @@ object Form_login: TForm_login
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object GroupBox1: TGroupBox
@@ -41,6 +42,7 @@ object Form_login: TForm_login
       Height = 25
       Caption = 'Ingresar'
       TabOrder = 0
+      OnClick = btn_loginClick
     end
     object user: TEdit
       Left = 168
