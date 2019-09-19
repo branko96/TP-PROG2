@@ -41,7 +41,7 @@ var
 
 procedure CrearHash(var ME:TipoMe;NombreMe:string;RutaMe:string);
 function DameHash(var ME:TipoMe;email:string) : integer;
-function ProximaPos(pos:TipoPosicion):TipoPosicion;
+function ProximaPos():TipoPosicion;
 function BuscarHash(var ME:TipoMe;email:string;var pos:TipoPosicion):boolean;
 function ExploracionLineal(var ME:TipoMe;email:string;var pos:TipoPosicion):boolean;
 procedure InsertarHasH(var ME:TipoME; reg:TipoRegDatos; var pos:TipoPosicion);
@@ -59,7 +59,6 @@ begin
  {$I-}
  assign(ME.D,RutaMe+NombreMe+'.DAT');
  assign(ME.C,RutaMe+NombreMe+'.CON');
- WriteLn(NombreMe+'.CON');
  reset(ME.D);
  errorD:=IOResult<>0;
  reset(ME.C);
@@ -71,8 +70,8 @@ begin
     RC.ultimo_id:=0;
     RC.cantidad_claves:=0;
     write(ME.C,RC);
-    RD.email:='';
-    RD.borrado:=true;
+    RD.email:='pepe@gmail.com';
+    RD.borrado:=false;
     for i:=0 to _MAX do
      begin
       seek(ME.D, i);
@@ -100,7 +99,7 @@ begin
   DameHash:=result;
 end;
 
-function ProximaPos(pos:TipoPosicion):TipoPosicion;
+function ProximaPos():TipoPosicion;
 begin
     ProximaPos := (pos + 1) mod (_MAX + 1);
 end;

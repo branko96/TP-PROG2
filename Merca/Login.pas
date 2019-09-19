@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ME_Usuarios;
+  Dialogs, StdCtrls, LO_Hash;
 
 type
   TForm_login = class(TForm)
@@ -31,7 +31,7 @@ implementation
 
 procedure TForm_login.FormCreate(Sender: TObject);
 begin
-ME_Usuarios.CrearHash(ME_Usuarios.ME,'Usuarios','C:\Users\BRANKO\Desktop\JUAN 23 TODO\TP FINAL PROG 2\TP-PROG2\Merca\');
+LO_Hash.CrearME(LO_Hash.ME);
 end;
 
 procedure TForm_login.btn_loginClick(Sender: TObject);
